@@ -80,7 +80,7 @@ if (accordions) {
   })
 }
 
-/* #Collapse
+/* #Dropdown
     ======================================================= */
 const dropdowns = document.querySelectorAll('.dropdown');
 
@@ -98,7 +98,7 @@ if (dropdowns) {
         // Click
       } else {
         dropdown.addEventListener('click', (e) => {
-          if (e.target.closest('.collapse-toggler')) {
+          if (e.target.closest('.dropdown-toggler')) {
             e.preventDefault();
             dropdown.classList.toggle('show');
           }
@@ -106,7 +106,7 @@ if (dropdowns) {
       }
     } else {
       dropdown.addEventListener('click', (e) => {
-        if (e.target.closest('.collapse-toggler')) {
+        if (e.target.closest('.dropdown-toggler')) {
           e.preventDefault();
           dropdown.classList.toggle('show');
         }
