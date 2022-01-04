@@ -1,52 +1,119 @@
-<!-- Tabs -->
-<div class="tabs">
-  <!-- Tab Navigation -->
-  <div class="tab-navigation">
-    <ul>
-      <li class="tab-btn active" data-tab="#tab1">
-        <a href="#"></a>
-      </li>
-      <li class="tab-btn" data-tab="#tab2">
-        <a href="#"></a>
-      </li>
-    </ul>
-  </div>
-  <!-- Tab Content -->
-  <div class="tab-content">
-    <ul>
-      <li class="tab-panel active" id="tab1">
-      </li>
-      <li class="tab-panel" id="tab2">
-      </li>
-    </ul>
-  </div>
-</div>
+<!DOCTYPE html>
+<html lang="he-IL" dir="rtl">
 
-<!-- Accordion -->
-<div class="accordion">
-  <!-- Collapsible -->
-  <div class="collapsible">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="elevate-framework.css">
+</head>
+
+<body>
+
+  <h1 class="f-d-40">ELEVATE FRAMEWORK</h1>
+
+  <h2 class="f-d-30">TABS</h2>
+  <!-- Tabs -->
+  <div class="tabs">
+    <!-- Tab Navigation -->
+    <div class="tab-navigation">
+      <ul>
+        <li class="tab-btn active" data-tab="#tab1">
+          <a href="#">AAA</a>
+        </li>
+        <li class="tab-btn" data-tab="#tab2">
+          <a href="#">BBB</a>
+        </li>
+      </ul>
+    </div>
+    <!-- Tab Content -->
+    <div class="tab-content">
+      <ul>
+        <li class="tab-panel active" id="tab1">
+          AAA CONTENT
+        </li>
+        <li class="tab-panel" id="tab2">
+          BBB CONTENT
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 class="f-d-30">ACCORDION</h2>
+  <!-- Accordion -->
+  <div class="accordion">
+    <!-- Collapsible -->
+    <div class="collapsible">
+      <!-- Toggler -->
+      <div class="collapse-toggler">
+        AAA
+        <div class="simbol">
+          <div class="plus">+</div>
+          <div class="minus">-</div>
+        </div>
+      </div>
+      <!-- Collapse -->
+      <div class="collapse">
+        <div>
+          BBB
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="f-d-30">DROPDOWN</h2>
+  <!-- Dropdown -->
+  <div class="dropdown">
     <!-- Toggler -->
-    <div class="collapse-toggler">
-      a
-      <div class="simbol">
-        <div class="plus">+</div>
-        <div class="minus">-</div>
-      </div>
-    </div>
-    <!-- Collapse -->
-    <div class="collapse">
-      <div>
-        b
-      </div>
+    <div class="dropdown-toggler">AAA</div>
+    <!-- Menu -->
+    <div class="dropdown-menu">
+      <ul>
+        <li>
+          <a href="#">AAA</a>
+        </li>
+        <li>
+          <a href="#">BBB</a>
+        </li>
+        <li>
+          <a href="#">CCC</a>
+        </li>
+      </ul>
     </div>
   </div>
-</div>
 
-<!-- Dropdown -->
-<div class="dropdown">
-  <!-- Toggler -->
-  <div class="dropdown-toggler"></div>
-  <!-- Menu -->
-  <div class="dropdown-menu"></div>
-</div>
+  <h2 class="f-d-30">CHECKBOX</h2>
+  <!-- Checkbox -->
+  <div class="form-group checkbox">
+    <input type="checkbox" id="checkbox-1">
+    <label for="checkbox-1">
+    </label>
+  </div>
+
+  <h2 class="f-d-30">CUSTOM SELECT</h2>
+  <!-- Custom Select -->
+  <div class="custom-select">
+    <div class="select-toggler">AAA</div>
+    <div class="select-menu">
+      <ul>
+        <li>
+          <a href="#">AAA</a>
+        </li>
+        <li>
+          <a href="#">BBB</a>
+        </li>
+        <li>
+          <a href="#">CCC</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="vendor/gsap.min.js"></script>
+  <script src="elevate-framework.js"></script>
+
+</body>
+
+</html>
