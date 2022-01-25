@@ -402,3 +402,46 @@ h6 {
   opacity: 1;
   visibility: visible;
 }
+
+/* #Popup
+================================================== */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  opacity: 0;
+  visibility: hidden;
+  align-items: center;
+  justify-content: center;
+  transition: all .5s ease;
+  background-color: rgba(0, 0, 0, .7);
+  display: none;
+}
+
+.popup.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup-content {
+  width: 52%;
+  background-color: white;
+}
+
+.popup-close img {
+}
+
+@media (max-width: 1023.98px) {
+  .popup-backdrop {
+    background-color: white;
+  }
+
+  .popup-content {
+  }
+
+  .popup-close img {
+  }
+}

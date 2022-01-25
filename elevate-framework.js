@@ -1,3 +1,7 @@
+/* #Global
+  ======================================================= */
+ const body = document.querySelector('body');
+
 /* #Tabs
   ======================================================= */
 const tabs = document.querySelectorAll('.tabs');
@@ -141,7 +145,7 @@ if (customSelects) {
           }
           if (e.target.closest('.select-menu a')) {
             e.preventDefault();
-            
+
             const selectLink = e.target.closest('.select-menu a');
 
             selectToggler.innerHTML = selectLink.innerHTML;
@@ -159,3 +163,66 @@ if (customSelects) {
     }
   });
 }
+
+/* #Is In Viewport
+    ======================================================= */
+function isInViewport(el) {
+
+  const rect = el.getBoundingClientRect();
+
+  const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+  const windowWidth = (window.innerWidth || document.documentElement.clientWidth);
+
+  const vertInView = (rect.top <= windowHeight) && ((rect.top + rect.height) >= 0);
+  const horInView = (rect.left <= windowWidth) && ((rect.left + rect.width) >= 0);
+
+  return (vertInView && horInView);
+}
+
+/* #Popup
+  ======================================================= */
+  const popups = document.querySelectorAll('.popup');
+  const popupTogglers = document.querySelectorAll('.popup-toggler');
+  const popupClosers = document.querySelectorAll('.popup-close');
+  const popupBackdrops = document.querySelectorAll('.popup-backdrop');
+  
+  if (popups && popupTogglers) {
+    popups.forEach((popup) => {
+      gsap.set(popup, {
+        display: 'flex'
+      });
+  
+      popup.addEventListener('click', (e) => {
+        if (!e.target.closest('.popup-content')) {
+          body.classList.remove('no-scroll');
+          popup.classList.remove('show');
+        }
+      });
+    });
+  
+    popupTogglers.forEach((toggler) => {
+  
+      toggler.addEventListener('click', (e) => {
+        e.preventDefault();
+  
+        const popup = document.querySelector(toggler.dataset.popup);
+  
+        body.classList.add('no-scroll');
+        popup.classList.add('show');
+      });
+    });
+  }
+  
+  if (popupClosers) {
+    popupClosers.forEach((closer) => {
+      closer.addEventListener('click', (e) => {
+        e.preventDefault();
+  
+        const popup = closer.closest('.popup');
+  
+        body.classList.remove('no-scroll');
+        popup.classList.remove('show');
+  
+      })
+    });
+  }
