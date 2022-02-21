@@ -226,3 +226,27 @@ if (popupClosers) {
     })
   });
 }
+
+/* #ScrollTo Links
+======================================================= */
+const scrollToLinks = document.querySelectorAll('.scroll-to-link');
+
+scrollToLinks.forEach((link) => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    const id = link.hash;
+    let yOffset = 0;
+
+    if (window.innerWidth > 1024) {
+      yOffset = -95;
+    } else {
+      yOffset = -100;
+    }
+    
+    const element = document.querySelector(id);
+    const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+    window.scrollTo({top: y, behavior: 'smooth'});
+  });
+});
